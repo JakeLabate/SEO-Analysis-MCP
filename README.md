@@ -1,6 +1,6 @@
-# SEO Analysis MCP (Google Search Console)
+# SEO Analysis MCP (Google Search Console) - Node.js
 
-This repository contains an MCP server that analyzes Google Search Console (GSC) exports (CSV or JSON) for SEO insights.
+This repository contains a Node.js MCP server that analyzes Google Search Console (GSC) exports (CSV or JSON) for SEO insights.
 
 ## Features
 
@@ -25,15 +25,19 @@ Input files must include these columns:
 ## Quickstart
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .[dev]
+npm install
 ```
 
 Run MCP server:
 
 ```bash
-python -m seo_gsc_mcp.server
+npm start
+```
+
+Run tests:
+
+```bash
+npm test
 ```
 
 ## Example MCP client config
@@ -42,8 +46,8 @@ python -m seo_gsc_mcp.server
 {
   "mcpServers": {
     "seo-gsc-analysis": {
-      "command": "python",
-      "args": ["-m", "seo_gsc_mcp.server"]
+      "command": "node",
+      "args": ["src/server.js"]
     }
   }
 }

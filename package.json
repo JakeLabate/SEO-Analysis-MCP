@@ -1,0 +1,14 @@
+{
+  "name": "seo-gsc-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for SEO analysis using Google Search Console data",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4"
+  }
+}
